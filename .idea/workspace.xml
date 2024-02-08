@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e42ff467-d00b-424b-a5e0-630c69a695f5" name="Changes" comment="add directories">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/postgresql_42_7_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Connection/DBConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/ControllerMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/book/AddBookToDatabase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/book/Availability.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/book/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/book/GetBooksFromDatabase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/book/OrderBook.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/book/SearchBook.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/records/AddRecordToDatabase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/records/Fine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/records/FineNotPaid.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/records/Records.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/records/ReturningBook.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/records/StudentNotReturnedBook.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/student/AddStudentToDatabase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/student/SearchStudentByName.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/student/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/student/StudentList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/student/ValidationName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Book.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Visitor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/teamAppProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/teamAppProject.iml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Ansar &lt;ansarsh1243@gmail.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2bySW7YA1LFImmISpd1SELUHBGo" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ControllerMain.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Ansar/Documents/postgresql-42.7.1.jar",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="main" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e42ff467-d00b-424b-a5e0-630c69a695f5" name="Changes" comment="" />
+      <created>1707185859125</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1707185859125</updated>
+      <workItem from="1707185860361" duration="186000" />
+      <workItem from="1707186081521" duration="693000" />
+      <workItem from="1707234514051" duration="673000" />
+      <workItem from="1707237909783" duration="1278000" />
+      <workItem from="1707241057890" duration="650000" />
+      <workItem from="1707275354316" duration="674000" />
+      <workItem from="1707276175533" duration="7038000" />
+      <workItem from="1707408368293" duration="8894000" />
+    </task>
+    <task id="LOCAL-00001" summary="upload">
+      <option name="closed" value="true" />
+      <created>1707234722610</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1707234722610</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Group project" />
+    <MESSAGE value="upload" />
+    <option name="LAST_COMMIT_MESSAGE" value="upload" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/model/User.java</url>
+          <line>8</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
