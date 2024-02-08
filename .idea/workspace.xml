@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e42ff467-d00b-424b-a5e0-630c69a695f5" name="Changes" comment="redesigned structure" />
+    <list default="true" id="e42ff467-d00b-424b-a5e0-630c69a695f5" name="Changes" comment="add idea settings" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,6 +27,7 @@
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProblemsViewState">
@@ -45,13 +46,15 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Application.ControllerMain.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Ansar/IdeaProjects/teamAppProject",
+    "last_opened_file_path": "C:/Users/Ansar/IdeaProjects/ALALibrary",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -107,7 +110,7 @@
       <workItem from="1707275354316" duration="674000" />
       <workItem from="1707276175533" duration="7038000" />
       <workItem from="1707408368293" duration="9248000" />
-      <workItem from="1707421642009" duration="293000" />
+      <workItem from="1707421642009" duration="454000" />
     </task>
     <task id="LOCAL-00001" summary="upload">
       <option name="closed" value="true" />
@@ -133,7 +136,23 @@
       <option name="project" value="LOCAL" />
       <updated>1707421414288</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="redesigned structure">
+      <option name="closed" value="true" />
+      <created>1707422018894</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1707422018894</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add idea settings">
+      <option name="closed" value="true" />
+      <created>1707422038860</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1707422038860</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,7 +164,8 @@
     <MESSAGE value="redesigned structure," />
     <MESSAGE value="redesigned" />
     <MESSAGE value="redesigned structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="redesigned structure" />
+    <MESSAGE value="add idea settings" />
+    <option name="LAST_COMMIT_MESSAGE" value="add idea settings" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
