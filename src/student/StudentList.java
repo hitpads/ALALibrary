@@ -21,7 +21,7 @@ public class StudentList extends Student{
                 student.setStudentClass(rs.getString(4));
                 student.setStudentAge(rs.getInt(5));
                 student.setStudentGender(rs.getString(6));
-                student.setStudentBirthDate(rs.getDate(7).toLocalDate());
+//                student.setStudentBirthDate(rs.getDate(7).toLocalDate());
                 System.out.println(student.toString());
                 System.out.println("--------");
             }

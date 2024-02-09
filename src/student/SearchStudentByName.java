@@ -9,7 +9,7 @@ public class SearchStudentByName extends Student {
 
     public static void searchStudent(Connection con)
     {
-        String query="select * from student where student_fname=? and student_lname=?";
+        String query = "SELECT * FROM student WHERE student_fname=? AND student_lname=?";
         @SuppressWarnings("resource")
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter Student Name");
@@ -29,14 +29,15 @@ public class SearchStudentByName extends Student {
                 student.setStudentClass(rs.getString(4));
                 student.setStudentAge(rs.getInt(5));
                 student.setStudentGender(rs.getString(6));
-                student.setStudentBirthDate(rs.getDate(7).toLocalDate());
+//                student.setStudentBirthDate(rs.getDate(7).toLocalDate());
                 System.out.println(student.toString());
                 System.out.println("--------");
             }
         }
         catch (Exception e) {
             // TODO: handle exception
-            System.out.println("Unable to get record....!");
+            System.out.println("Unable to get record!");
+            System.out.println(e.getMessage());
         }
     }
 

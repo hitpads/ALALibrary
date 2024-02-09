@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8ce0063-4a18-4c3f-875c-36ac800ee674" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/postgresql_42_7_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="a8ce0063-4a18-4c3f-875c-36ac800ee674" name="Changes" comment="project compatibilty fix">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/postgresql_42_7_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ControllerMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ControllerMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/student/AddStudentToDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/student/AddStudentToDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/student/SearchStudentByName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/student/SearchStudentByName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/student/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/student/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/student/StudentList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/student/StudentList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/teamAppProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/teamAppProject.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,9 +25,29 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;hitpads&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="9af4dd07-ad95-4898-bc44-cd881f3af93b" />
+        <option name="url" value="https://github.com/hitpads/ALALibrary.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
 }]]></component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2c6DNjpPxybeS7YdlRGcS9vUCV2" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -28,13 +55,28 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.ControllerMain.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Ansar/IdeaProjects/teamAppProject",
+    "last_opened_file_path": "C:/Users/Ansar/Documents/postgresql-42.7.1.jar",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
 }]]></component>
   <component name="SharedIndexes">
@@ -52,11 +94,38 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1707423100358</updated>
-      <workItem from="1707423101563" duration="19000" />
+      <workItem from="1707423101563" duration="536000" />
+      <workItem from="1707481281459" duration="984000" />
+      <workItem from="1707482343208" duration="13041000" />
     </task>
+    <task id="LOCAL-00001" summary="project compatibilty fix">
+      <option name="closed" value="true" />
+      <created>1707423195653</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1707423195653</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="project compatibilty fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="project compatibilty fix" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.postgresql.util.PSQLException" package="org.postgresql.util">
+            <option name="NOTIFY_CAUGHT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

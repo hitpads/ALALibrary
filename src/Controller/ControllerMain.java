@@ -22,7 +22,7 @@ public class ControllerMain {
 
         if(connectionObj!=null)
             System.out.println("---- Connected ----");
-        else
+        else    
             System.out.println("Error in Connection...!");
         while(true)
         {
