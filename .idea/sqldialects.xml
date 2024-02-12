@@ -3,6 +3,7 @@
   <component name="SqlDialectMappings">
     <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/78be0dc3-c3a9-48bc-817a-baa961a0898a/console.sql" dialect="PostgreSQL" />
     <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/78be0dc3-c3a9-48bc-817a-baa961a0898a/console_1.sql" dialect="PostgreSQL" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/78be0dc3-c3a9-48bc-817a-baa961a0898a/console_3.sql" dialect="PostgreSQL" />
     <file url="PROJECT" dialect="PostgreSQL" />
   </component>
 </project>

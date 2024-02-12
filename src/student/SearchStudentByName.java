@@ -10,7 +10,7 @@ public class SearchStudentByName extends Student {
     public static void searchStudent(Connection con)
     {
         String query = "SELECT * FROM student WHERE student_fname=? AND student_lname=?";
-        @SuppressWarnings("resource")
+
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter Student Name");
         String name=sc.nextLine();
@@ -26,11 +26,9 @@ public class SearchStudentByName extends Student {
                 student.setStudentId(rs.getInt(1));
                 student.setStudentFname(rs.getString(2));
                 student.setStudentLname(rs.getString(3));
-                student.setStudentClass(rs.getString(4));
-                student.setStudentAge(rs.getInt(5));
-                student.setStudentGender(rs.getString(6));
-//                student.setStudentBirthDate(rs.getDate(7).toLocalDate());
-                System.out.println(student.toString());
+                student.setStudentAge(rs.getInt(4));
+                student.setstudentMajor(rs.getString(5));
+                System.out.println(student);
                 System.out.println("--------");
             }
         }

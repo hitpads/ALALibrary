@@ -18,10 +18,9 @@ public class StudentList extends Student{
                 student.setStudentId(rs.getInt(1));
                 student.setStudentFname(rs.getString(2));
                 student.setStudentLname(rs.getString(3));
-                student.setStudentClass(rs.getString(4));
-                student.setStudentAge(rs.getInt(5));
-                student.setStudentGender(rs.getString(6));
-                System.out.println(student.toString());
+                student.setStudentAge(rs.getInt(4));
+                student.setstudentMajor(rs.getString(5));
+                System.out.println(student);
                 System.out.println("--------");
             }
         }catch (Exception e) {

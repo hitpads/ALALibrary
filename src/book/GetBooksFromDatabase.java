@@ -24,8 +24,7 @@ public class GetBooksFromDatabase extends Book {
                 System.out.println("Count : "+rs.getInt(5));
                 System.out.println("-------");
             }
-        } catch (Exception e) {
-            // TODO Auto-generated catch block
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }

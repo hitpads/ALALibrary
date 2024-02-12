@@ -17,7 +17,7 @@ public class ControllerMain {
     public static void main(String[] args) {
 
         DBConnection connect=new DBConnection();
-        Connection connectionObj=connect.getConnection("ALALibrary","postgres","amanisgay");
+        Connection connectionObj = connect.getConnection("ALALibrary","postgres","amanisgay");
 
         if(connectionObj!=null)
             System.out.println("---- Connected ----");
@@ -26,7 +26,7 @@ public class ControllerMain {
         while(true)
         {
             System.out.println("1.Admin \n2.Student \n3.Exit");
-            Scanner keyboard=new Scanner(System.in);
+            Scanner keyboard = new Scanner(System.in);
             int choice=keyboard.nextInt();
 
             switch(choice)
@@ -38,7 +38,7 @@ public class ControllerMain {
                     System.out.println("3.Add Book.");
                     System.out.println("4.Search student.");
                     System.out.println("5.Back");
-                    int key=keyboard.nextInt();
+                    int key = keyboard.nextInt();
                     switch (key)
                     {
                         case 1:
