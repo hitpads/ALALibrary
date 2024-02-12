@@ -21,14 +21,12 @@ public class StudentList extends Student{
                 student.setStudentClass(rs.getString(4));
                 student.setStudentAge(rs.getInt(5));
                 student.setStudentGender(rs.getString(6));
-//                student.setStudentBirthDate(rs.getDate(7).toLocalDate());
                 System.out.println(student.toString());
                 System.out.println("--------");
             }
         }catch (Exception e) {
-            // TODO: handle exception
-            System.out.println("Unable to Fetch Information....!");
-            e.printStackTrace();
+            System.out.println("Unable to Fetch List!");
+            e.getMessage();
         }
     }
 

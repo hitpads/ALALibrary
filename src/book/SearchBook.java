@@ -29,7 +29,6 @@ public class SearchBook {
                 System.out.println("-------");
             }
         }catch (Exception e) {
-            // TODO: handle exception
             System.out.println("Error while searching or no such book found!");
         }
 

@@ -13,9 +13,6 @@ public class Student {
     public Scanner sc=new Scanner(System.in);
 
 
-    public int getStudentId() {
-        return studentId;
-    }
     public void setStudentId(int studentId) {
         this.studentId = studentId;
     }
@@ -23,13 +20,13 @@ public class Student {
         return studentFname;
     }
     public void setStudentFname() {
-        System.out.println("Enter First name -:");
+        System.out.println("Enter First name: ");
         String fName=sc.next();
         if(ValidationName.isValid(fName))
             this.studentFname = fName;
         else
         {
-            System.out.println("Invalid name...!");
+            System.out.println("Invalid name!");
             this.setStudentFname();
         }
     }
@@ -38,13 +35,13 @@ public class Student {
         return studentLname;
     }
     public void setStudentLname() {
-        System.out.println("Enter Last name -:");
+        System.out.println("Enter Last name: ");
         String lName=sc.next();
         if(ValidationName.isValid(lName))
             this.studentLname = lName;
         else
         {
-            System.out.println("Invalid name...!");
+            System.out.println("Invalid name!");
             this.setStudentLname();
         }
     }

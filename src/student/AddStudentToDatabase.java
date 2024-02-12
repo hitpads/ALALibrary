@@ -37,16 +37,15 @@ public class AddStudentToDatabase extends Student{
             int count=ps.executeUpdate();
             if(count!=0)
             {
-                System.out.println("Added Student");
+                System.out.println("Student Added!");
             }
             else
             {
-                System.out.println("Error");
+                System.out.println("Error!");
             }
         }catch (Exception e) {
-            // TODO: handle exception
-            System.out.println("Error while Saving data to database...!");
-            e.printStackTrace();
+            System.out.println("Error!");
+            e.getMessage();
         }
 
     }
