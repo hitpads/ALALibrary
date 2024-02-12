@@ -52,7 +52,7 @@ public class Records {
     }
 
     public void setIssueDate() {
-        System.out.println("Issue Date -:");
+        System.out.println("Issue Date in yyyy-mm-dd format:");
         String date=sc.next();
         try {
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-d");
@@ -60,7 +60,7 @@ public class Records {
         }
         catch (Exception e) {
             // TODO: handle exception
-            System.out.println("Error...!");
+            System.out.println("Error!");
             System.out.println("Try again");
             this.setIssueDate();
         }

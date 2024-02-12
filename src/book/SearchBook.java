@@ -30,7 +30,7 @@ public class SearchBook {
             }
         }catch (Exception e) {
             // TODO: handle exception
-            System.out.println("Error while fetching...!");
+            System.out.println("Error while searching or no such book found!");
         }
 
     }

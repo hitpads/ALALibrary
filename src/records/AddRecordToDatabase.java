@@ -15,23 +15,23 @@ public class AddRecordToDatabase extends Records {
         @SuppressWarnings("resource")
         Scanner sc=new Scanner(System.in);
 
-        System.out.println("Book ID : ");
+        System.out.println("Book ID: ");
         recordObj.setBookId(sc.nextInt());
 
         if(Availability.isAvailable(con, recordObj.getBookId()))
         {
 
-            System.out.println("Enter Student ID :");
+            System.out.println("Enter Student ID:");
             recordObj.setStudentId(sc.nextInt());
 
             recordObj.setIssueDate();
 
-            recordObj.setDueDate(recordObj.getIssueDate().plusDays(5));
+            recordObj.setDueDate(recordObj.getIssueDate().plusDays(10));
 
-            System.out.println("Due Date : "+recordObj.getDueDate());
+            System.out.println("Due "+recordObj.getDueDate());
 
             try {
-                String query="insert into record values(default,?,?,?,?,null,null,null)";
+                String query="insert into record values(?,?,?,?)";
                 PreparedStatement ps=con.prepareStatement(query);
                 ps.setInt(1, recordObj.getStudentId());
                 ps.setInt(2, recordObj.getBookId());
@@ -41,16 +41,17 @@ public class AddRecordToDatabase extends Records {
                 if(count>0)
                     System.out.println("Book Issued \n Due Date : "+recordObj.getDueDate());
                 else
-                    System.out.println("Not avalilable....");
+                    System.out.println("Not avalilable.");
 
 
             }catch (Exception e) {
                 // TODO: handle exception
-                System.out.println("Unable to process....!");
+                System.out.println("Unable to process!");
+                System.out.println(e.getMessage());
             }
         }
         else
-            System.out.println("Sorry...Book Not Available...");
+            System.out.println("Sorry, book is not available.");
     }
 
 }

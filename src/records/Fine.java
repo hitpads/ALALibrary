@@ -12,7 +12,7 @@ public class Fine {
         //	Records record=new Records();
         int fine=0,resultId=0;
         Scanner sc=new Scanner(System.in);
-        System.out.println("�nter Student Id :");
+        System.out.println("Enter Student Id :");
         int studentId=sc.nextInt();
         System.out.println("Enter Book Id :");
         int bookId=sc.nextInt();

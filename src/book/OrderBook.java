@@ -5,7 +5,7 @@ import java.sql.PreparedStatement;
 
 public class OrderBook {
 
-    public static void orderABOok(Connection con,String name)
+    public static void orderABOok(Connection con, String name)
     {
         String query="insert into orders values(default,?)";
 
