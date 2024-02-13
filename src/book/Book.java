@@ -2,18 +2,11 @@ package book;
 
 public class Book {
 
-    private int bookId;
     private String bookAuthor;
     private String booktitle;
     private int bookCount;
     private int bookPrice;
 
-    public int getBookId() {
-        return bookId;
-    }
-    public void setBookId(int bookId) {
-        this.bookId = bookId;
-    }
     public String getBookAuthor() {
         return bookAuthor;
     }

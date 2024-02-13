@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a8ce0063-4a18-4c3f-875c-36ac800ee674" name="Changes" comment="Output spacing fixes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/student/AddStudentToDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/student/AddStudentToDatabase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/student/StudentList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/student/StudentList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/book/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/book/Book.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +114,7 @@
       <workItem from="1707482343208" duration="18252000" />
       <workItem from="1707589203913" duration="149000" />
       <workItem from="1707748355115" duration="15150000" />
-      <workItem from="1707790140820" duration="965000" />
+      <workItem from="1707790140820" duration="1240000" />
     </task>
     <task id="LOCAL-00001" summary="project compatibilty fix">
       <option name="closed" value="true" />
@@ -173,7 +172,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707790382843</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Output spacing fixes">
+      <option name="closed" value="true" />
+      <created>1707791122339</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1707791122339</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
