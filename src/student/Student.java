@@ -64,7 +64,7 @@ public class Student {
         return studentMajor;
     }
     public void setstudentMajor() {
-        System.out.println("Class -:");
+        System.out.println("Major: ");
         String studClass=sc.next();
         if(studClass.equalsIgnoreCase("MT") || studClass.equalsIgnoreCase("SE") || studClass.equalsIgnoreCase("CS") || studClass.equalsIgnoreCase("IT"))
             this.studentMajor=studClass;
