@@ -32,7 +32,6 @@ public class DBConnection {
             this.con.close();
             System.out.println("Connection Closed!");
         } catch (Exception e) {
-            // TODO Auto-generated catch block
             System.out.println("Unable to Close Connection!" + e.getMessage());
         }
     }

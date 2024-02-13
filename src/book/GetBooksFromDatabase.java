@@ -28,5 +28,4 @@ public class GetBooksFromDatabase extends Book {
             e.printStackTrace();
         }
     }
-
 }

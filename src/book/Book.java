@@ -31,8 +31,4 @@ public class Book {
     public void setBookPrice(int bookPrice) {
         this.bookPrice = bookPrice;
     }
-
-
-
-
 }
