@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8ce0063-4a18-4c3f-875c-36ac800ee674" name="Changes" comment="Final touches">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/78be0dc3-c3a9-48bc-817a-baa961a0898a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/78be0dc3-c3a9-48bc-817a-baa961a0898a.xml" afterDir="false" />
+    <list default="true" id="a8ce0063-4a18-4c3f-875c-36ac800ee674" name="Changes" comment="Output spacing fixes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/student/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/student/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/student/AddStudentToDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/student/AddStudentToDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/student/StudentList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/student/StudentList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +115,7 @@
       <workItem from="1707482343208" duration="18252000" />
       <workItem from="1707589203913" duration="149000" />
       <workItem from="1707748355115" duration="15150000" />
-      <workItem from="1707790140820" duration="214000" />
+      <workItem from="1707790140820" duration="965000" />
     </task>
     <task id="LOCAL-00001" summary="project compatibilty fix">
       <option name="closed" value="true" />
@@ -165,7 +165,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707771307613</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Output spacing fixes">
+      <option name="closed" value="true" />
+      <created>1707790382843</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1707790382843</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,7 +185,8 @@
     <MESSAGE value="small improvements" />
     <MESSAGE value="Optimize functionality" />
     <MESSAGE value="Final touches" />
-    <option name="LAST_COMMIT_MESSAGE" value="Final touches" />
+    <MESSAGE value="Output spacing fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Output spacing fixes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

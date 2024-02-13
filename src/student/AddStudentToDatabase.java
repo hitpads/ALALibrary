@@ -9,10 +9,10 @@ public class AddStudentToDatabase extends Student{
 
     public static void addStudent(Connection con)
     {
-        Student student=new Student();
+        Student student = new Student();
 
 
-        Scanner sc=new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
         student.setStudentFname();
         student.setStudentLname();

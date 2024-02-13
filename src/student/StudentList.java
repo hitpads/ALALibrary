@@ -28,5 +28,4 @@ public class StudentList extends Student{
             e.getMessage();
         }
     }
-
 }
