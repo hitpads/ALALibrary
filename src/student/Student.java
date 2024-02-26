@@ -8,7 +8,7 @@ public class Student {
     private String studentFname;
     private String studentLname;
     private int studentAge;
-    private String studentMajor;
+    private String username;
     public Scanner sc=new Scanner(System.in);
 
 
@@ -51,8 +51,8 @@ public class Student {
         this.studentLname = studentLname;
     }
 
-    public void setstudentMajor(String studentMajor) {
-        this.studentMajor = studentMajor;
+    public void setStudentUsername() {
+        this.username = username;
     }
     public int getStudentAge() {
         return studentAge;
@@ -60,25 +60,16 @@ public class Student {
     public void setStudentAge(int studentAge) {
         this.studentAge = studentAge;
     }
-    public String getstudentMajor() {
-        return studentMajor;
+    public String getUsername() {
+        return username;
     }
-    public void setstudentMajor() {
-        System.out.println("Major: ");
-        String studClass=sc.next();
-        if(studClass.equalsIgnoreCase("MT") || studClass.equalsIgnoreCase("SE") || studClass.equalsIgnoreCase("CS") || studClass.equalsIgnoreCase("IT"))
-            this.studentMajor=studClass;
-        else
-        {
-            System.out.println("Invalid");
-            this.setstudentMajor();
-        }
+    public void setUsername(String username) {
+        this.username = username;
     }
     @Override
     public String toString() {
-        return "StudentId : " + this.studentId +
-                "\n"+"Name : " + this.studentFname+  " " + this.studentLname
-                + "\n"+"Age : " + this.studentAge + "\n"+"Major : " + this.studentMajor;
+        return "Name : " + this.studentFname+  " " + this.studentLname
+                + "\n"+"Age : " + this.studentAge + "\n"+"Username : " + this.username;
     }
 
 

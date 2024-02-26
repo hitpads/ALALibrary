@@ -1,94 +1,204 @@
 package Controller;
 
-import Connection.DBConnection;
 import book.AddBookToDatabase;
-import book.GetBooksFromDatabase;
 import book.SearchBook;
-import student.AddStudentToDatabase;
+import data.DBWork;
+import data.Utils;
+import schemas.User;
+import schemas.UserType;
 import student.SearchStudentByName;
 import student.StudentList;
+import book.GetBooksFromDatabase;
 
-import java.sql.Connection;
+import java.sql.SQLException;
+import java.util.Objects;
 import java.util.Scanner;
 
-
 public class Main {
+    public static void main(String[] args) throws SQLException, NumberFormatException {
+        final Scanner scanner = new Scanner(System.in);
+        final DBWork dbWork = new DBWork();
+        final Utils utils = new Utils();
 
-    public static void main(String[] args) {
+        System.out.println("Welcome to the ALAlibrary!");
 
-        DBConnection connect=new DBConnection();
-        Connection connectionObj = connect.getConnection("ALALibrary","postgres","amanisgay");
+        User curUser = null;
+        boolean isAuth = false;
 
-        if(connectionObj!=null)
-            System.out.println("---- Connected ----");
-        else    
-            System.out.println("Error in Connection!");
-        while(true)
-        {
-            System.out.println("1.Admin \n2.Student \n3.Exit");
-            Scanner keyboard = new Scanner(System.in);
-            int choice=keyboard.nextInt();
+        while (curUser == null) {
+            System.out.println("-----------------");
+            System.out.println("1: Authorize");
+            System.out.println("2: Register");
+            System.out.println("3: Exit");
+            System.out.println();
+            System.out.print("Enter action: ");
 
-            switch(choice)
-            {
+            int RegOfAuth = Integer.parseInt(scanner.nextLine());
+            switch (RegOfAuth) {
                 case 1:
-                    System.out.println("------>>>>>>>>");
-                    System.out.println("1.Add Student.");
-                    System.out.println("2.Get Student List.");
-                    System.out.println("3.Add Book.");
-                    System.out.println("4.Search student.");
-                    System.out.println("5.Back");
-                    int key = keyboard.nextInt();
-                    switch (key)
-                    {
-                        case 1:
-                            AddStudentToDatabase.addStudent(connectionObj);
-                            break;
-
-                        case 2:
-                            StudentList.getAllStudent(connectionObj);
-                            break;
-                        case 3:
-                            AddBookToDatabase.addBook(connectionObj);
-                            break;
-
-                        case 4:
-                            SearchStudentByName.searchStudent(connectionObj);
-                            break;
-
-                        case 5:
-                            break;
+                    System.out.println("Enter your data: ");
+                    System.out.print("Your login: ");
+                    String username = scanner.nextLine();
+                    curUser = dbWork.getCurrUser(username);
+                    if (curUser != null) {
+                        if (curUser.getUserType() == UserType.Admin) {
+                            System.out.println("Welcome, administrator " + curUser + "!");
+                        } else {
+                            System.out.println("Welcome, " + curUser);
+                        }
+                        System.out.print("Enter your password to continue: ");
+                        String password = scanner.next();
+                        isAuth = utils.AuthUser(curUser, password);
+                        if (isAuth) {
+                            System.out.println("Successfully authorized!");
+                        } else {
+                            System.out.println("You are not authorized.");
+                        }
+                    } else {
+                        System.out.println("No such student in the database.");
                     }
                     break;
                 case 2:
-                    System.out.println("------->>>>>>>>");
-                    System.out.println("1.Search Book.");
-                    System.out.println("2.Display books.");
-                    System.out.println("3.Back");
-                    int key2=keyboard.nextInt();
-                    switch(key2)
-                    {
-                        case 1:
-                            SearchBook.searchBookDetails(connectionObj);
-                            break;
-                        case 2:
-                            assert connectionObj != null;
-                            GetBooksFromDatabase.getAllBooks(connectionObj);
-                            break;
-                        case 3:
-                            break;
+                    System.out.println("Enter your data:");
+                    System.out.print("Your name: ");
+                    String newUserName = scanner.next();
+                    System.out.print("Your surname: ");
+                    String newUserSurname = scanner.next();
+                    System.out.print("Your age: ");
+                    int newUserAge = Integer.parseInt(scanner.next());
+                    System.out.print("Your login: ");
+                    String newUserUsername = scanner.next();
+                    System.out.print("Your password: ");
+                    String newUserPassword = scanner.next();
+                    System.out.println();
+                    System.out.println("Re-enter the password: ");
+                    System.out.print("Your password: ");
+                    String newUserRepeatedPassword = scanner.next();
+
+                    if (newUserPassword.equals(newUserRepeatedPassword)) {
+                        curUser = new User(
+                                newUserName,
+                                newUserSurname,
+                                newUserAge,
+                                newUserUsername,
+                                newUserPassword
+                        );
+                        System.out.println("You are registered and authorized!");
+                        dbWork.InsertUser(curUser);
+                        isAuth = true;
+
+                    } else {
+                        System.out.println("You haven't completed the registration. Try again.");
                     }
                     break;
                 case 3:
-                    System.out.println("See you!");
-                    connect.closeConnection();
-                    keyboard.close();
+                    System.out.println("Thank you for using the library!");
                     System.exit(0);
                     break;
                 default:
-                    System.out.println("Try again");
+                    System.out.println("No such action. Try again.");
+                    System.exit(0);
+                    break;
+            }
+        }
+        // MENUS
+
+        while (true) {
+            int typeOfAction;
+            if (isAuth) {
+                switch (curUser.getUserType()) {
+                    case UserType.User:
+                        System.out.println("1: Change password");
+                        System.out.println("2. Display books");
+                        System.out.println("3. Search book");
+                        System.out.println("4: Exit");
+                        System.out.println();
+                        System.out.print("Enter action: ");
+                        typeOfAction = Integer.parseInt(scanner.next());
+                        switch (typeOfAction) {
+                            case 1:
+                                System.out.println("Enter new password: ");
+                                String newPassword = scanner.next();
+                                dbWork.updatePassword(curUser, newPassword);
+                                System.out.println("Password changed.");
+                                break;
+                            case 2:
+                                assert utils.GetConnector() != null;
+                                GetBooksFromDatabase.getAllBooks(Objects.requireNonNull(utils.GetConnector()));
+                                break;
+                            case 3:
+                                SearchBook.searchBookDetails(utils.GetConnector());
+                                break;
+                            case 4:
+                                System.out.println("Thanks for using the library!");
+                                System.exit(0);
+                                break;
+                            default:
+                                System.out.println("No such action. Try again.");
+                        }
+                        break;
+                    case UserType.Admin:
+                        System.out.println();
+                        System.out.println("1: Change password");
+                        System.out.println("2. Add book");
+                        System.out.println("3: Display books");
+                        System.out.println("4: Delete student");
+                        System.out.println("5: Get student list");
+                        System.out.println("6. Search students");
+                        System.out.println("7: Exit");
+                        System.out.println();
+                        System.out.print("Enter action: ");
+                        typeOfAction = Integer.parseInt(scanner.next());
+                        switch (typeOfAction) {
+                            case 1:
+                                System.out.println("Enter new password: ");
+                                String newPassword = scanner.next();
+                                dbWork.updatePassword(curUser, newPassword);
+                                System.out.println("Password changed.");
+                                break;
+
+                            case 2:
+                                AddBookToDatabase.addBook(utils.GetConnector());
+                                break;
+                            case 3:
+                                assert utils.GetConnector() != null;
+                                GetBooksFromDatabase.getAllBooks(Objects.requireNonNull(utils.GetConnector()));
+                                break;
+                            case 4:
+                                System.out.print("The login (username) of the student you want to delete: ");
+                                String deletedUserNickname = scanner.next();
+                                User deletedUser = dbWork.getCurrUser(deletedUserNickname);
+                                if (deletedUser != null) {
+                                    if (deletedUser.getUsername().equals(curUser.getUsername())) {
+                                        System.out.println("You can't delete yourself!");
+                                    } else {
+                                        dbWork.deleteUser(deletedUser);
+                                        System.out.println("Student " + deletedUser + " has been deleted.");
+                                    }
+                                } else {
+                                    System.out.println("No such student in the database.");
+                                }
+                                break;
+                            case 5:
+                                StudentList.getAllStudent(utils.GetConnector());
+                                break;
+                            case 6:
+                                SearchStudentByName.searchStudent(utils.GetConnector());
+                                break;
+                            case 7:
+                                System.out.println("Thanks for using the library!");
+                                System.exit(0);
+                            default:
+                                System.out.println("No such action. Try again.");
+                        }
+                        break;
+                    default:
+                        //...
+                }
+            } else {
+                System.out.println("You are not authorized. Goodbye!");
+                System.exit(0);
             }
         }
     }
-
 }

@@ -5,16 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8ce0063-4a18-4c3f-875c-36ac800ee674" name="Changes" comment="Output spacing fixes">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/Utils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/schemas/Admin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/schemas/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/schemas/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/schemas/UserType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/78be0dc3-c3a9-48bc-817a-baa961a0898a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/78be0dc3-c3a9-48bc-817a-baa961a0898a.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/78be0dc3-c3a9-48bc-817a-baa961a0898a/storage_v2/_src_/database/ALALibrary.Zc5D2A/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/78be0dc3-c3a9-48bc-817a-baa961a0898a/storage_v2/_src_/database/ALALibrary.Zc5D2A/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Connection/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Connection/DBConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/book/AddBookToDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/book/AddBookToDatabase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/book/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/book/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/book/GetBooksFromDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/book/GetBooksFromDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Connection/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/DBWork.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/student/AddStudentToDatabase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/student/SearchStudentByName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/student/SearchStudentByName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/student/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/student/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/student/StudentList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/student/StudentList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -43,6 +61,9 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="2c6DNjpPxybeS7YdlRGcS9vUCV2" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -50,12 +71,14 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.ControllerMain.executor": "Run",
+    "Application.Main.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Ansar/Documents/postgresql-42.7.1.jar",
@@ -92,7 +115,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ControllerMain" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -117,6 +140,7 @@
       <workItem from="1707589203913" duration="149000" />
       <workItem from="1707748355115" duration="15150000" />
       <workItem from="1707790140820" duration="1596000" />
+      <workItem from="1708936691170" duration="15795000" />
     </task>
     <task id="LOCAL-00001" summary="project compatibilty fix">
       <option name="closed" value="true" />

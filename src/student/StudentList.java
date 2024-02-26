@@ -1,31 +1,32 @@
 package student;
 
+import schemas.User;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-public class StudentList extends Student{
+public class StudentList extends User{
 
     public static void getAllStudent(Connection con)
     {
-        String query="select * from student";
+        String query="select * from users WHERE user_type='User'";
         try {
             PreparedStatement ps=con.prepareStatement(query);
-            ResultSet rs=ps.executeQuery();
+            ResultSet rs = ps.executeQuery();
             while(rs.next())
             {
-                Student student=new Student();
-                student.setStudentId(rs.getInt(1));
-                student.setStudentFname(rs.getString(2));
-                student.setStudentLname(rs.getString(3));
-                student.setStudentAge(rs.getInt(4));
-                student.setstudentMajor(rs.getString(5));
-                System.out.println(student);
+                User user = new User();
+                user.setName(rs.getString(1));
+                user.setSurname(rs.getString(2));
+                user.setAge(rs.getInt(3));
+                user.setUsername(rs.getString(4));
+                System.out.println(user.getStudentListingFormat());
                 System.out.println("--------");
             }
         }catch (Exception e) {
             System.out.println("Unable to Fetch List!");
-            e.getMessage();
+            e.printStackTrace();
         }
     }
 }
