@@ -1,5 +1,7 @@
-package student;
+package schemas;
 
+
+import StudentMenu.ValidationName;
 
 import java.util.Scanner;
 public class Student {

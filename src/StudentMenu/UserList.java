@@ -1,4 +1,4 @@
-package student;
+package StudentMenu;
 
 import schemas.User;
 
@@ -6,7 +6,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-public class StudentList extends User{
+public class UserList extends User{
 
     public static void getAllStudent(Connection con)
     {

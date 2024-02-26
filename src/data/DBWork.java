@@ -10,6 +10,23 @@ import java.util.Objects;
 public class DBWork {
     private final Utils utils = new Utils();
 
+    public static int getNextUserId() {
+        try {
+            Connection conn = new Utils().GetConnector();
+            Statement statement = conn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,
+                    ResultSet.CONCUR_UPDATABLE);
+            String query = "SELECT MAX(id) FROM users";
+            ResultSet table = statement.executeQuery(query);
+            table.beforeFirst();
+            while (table.next()) {
+                return table.getInt(1) + 1;
+            }
+        } catch (Exception e) {
+            //...
+        }
+        return 0;
+    }
+
     public void InsertUser(User user) throws SQLException {
         try {
             Connection conn = utils.GetConnector();
@@ -21,6 +38,30 @@ public class DBWork {
             statement.executeQuery(query);
         } catch (Exception e) {
             //...
+        }
+    }
+
+
+    public void issueBook(int bookId, int userId) {
+        try (Connection connection = utils.GetConnector()) {
+            // user exist
+            String userQuery = "SELECT COUNT(*) FROM users WHERE id = " + userId;
+            Statement userStatement = connection.createStatement();
+            ResultSet userResultSet = userStatement.executeQuery(userQuery);
+            userResultSet.next();
+            int userCount = userResultSet.getInt(1);
+            if (userCount == 0) {
+                System.out.println("Error issuing book: User not found.");
+                return;
+            }
+
+            // Issue the book
+            String query = "INSERT INTO book_issues (book_id, user_id, issue_date) VALUES (" + bookId + ", " + userId + ", CURRENT_DATE)";
+            Statement statement = connection.createStatement();
+            statement.executeUpdate(query);
+            System.out.println("Book issued.");
+        } catch (SQLException e) {
+            System.out.println("Error issuing book: " + e.getMessage());
         }
     }
 
@@ -53,6 +94,7 @@ public class DBWork {
         }
         return null;
     }
+
 
     public void updatePassword(User currUser, String newPass) {
         try {

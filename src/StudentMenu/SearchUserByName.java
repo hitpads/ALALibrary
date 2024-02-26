@@ -1,4 +1,4 @@
-package student;
+package StudentMenu;
 
 import schemas.User;
 
@@ -7,7 +7,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Scanner;
 
-public class SearchStudentByName extends User {
+public class SearchUserByName extends User {
 
     public static void searchStudent(Connection con)
     {

@@ -5,10 +5,15 @@ import data.Utils;
 import java.sql.Connection;
 
 public class User extends Person {
+    private int id;
     private final Utils utils = new Utils();
     private String username;
     private final UserType userType = UserType.User;
     private String hashedPassword;
+
+    public User(String name, String surname, int age, String username, String password) {
+        super();
+    }
 
 
     public String getHashedPassword() {
@@ -27,14 +32,22 @@ public class User extends Person {
         return username;
     }
 
+
     public UserType getUserType() {
         return userType;
+    }
+
+    public int getId() {
+
+        return id;
+
     }
 
     public User() {
     }
 
-    public User(String name, String surname, int age, String username, String password) {
+    public User(int id, String name, String surname, int age, String username, String password) {
+        this.id = id;
         setName(name);
         setSurname(surname);
         setAge(age);
@@ -51,5 +64,6 @@ public class User extends Person {
     public String getStudentListingFormat() {
         return this.getName() + " " + this.getSurname() + " (" + this.getUsername() + ")";
     }
+
 
 }

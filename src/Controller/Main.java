@@ -6,8 +6,8 @@ import data.DBWork;
 import data.Utils;
 import schemas.User;
 import schemas.UserType;
-import student.SearchStudentByName;
-import student.StudentList;
+import StudentMenu.SearchUserByName;
+import StudentMenu.UserList;
 import book.GetBooksFromDatabase;
 
 import java.sql.SQLException;
@@ -76,7 +76,9 @@ public class Main {
                     String newUserRepeatedPassword = scanner.next();
 
                     if (newUserPassword.equals(newUserRepeatedPassword)) {
+                        int newUserId = DBWork.getNextUserId();
                         curUser = new User(
+                                newUserId,
                                 newUserName,
                                 newUserSurname,
                                 newUserAge,
@@ -104,17 +106,17 @@ public class Main {
         // MENUS
 
         while (true) {
-            int typeOfAction;
             if (isAuth) {
                 switch (curUser.getUserType()) {
                     case UserType.User:
                         System.out.println("1: Change password");
                         System.out.println("2. Display books");
                         System.out.println("3. Search book");
-                        System.out.println("4: Exit");
+                        System.out.println("4: Issue book");
+                        System.out.println("5: Exit");
                         System.out.println();
                         System.out.print("Enter action: ");
-                        typeOfAction = Integer.parseInt(scanner.next());
+                        int typeOfAction = Integer.parseInt(scanner.next());
                         switch (typeOfAction) {
                             case 1:
                                 System.out.println("Enter new password: ");
@@ -130,6 +132,12 @@ public class Main {
                                 SearchBook.searchBookDetails(utils.GetConnector());
                                 break;
                             case 4:
+                                System.out.print("Enter book ID: ");
+                                int bookId = Integer.parseInt(scanner.next());
+                                dbWork.issueBook(bookId, curUser.getId());
+                                System.out.println("Book issued.");
+                                break;
+                            case 5:
                                 System.out.println("Thanks for using the library!");
                                 System.exit(0);
                                 break;
@@ -142,9 +150,9 @@ public class Main {
                         System.out.println("1: Change password");
                         System.out.println("2. Add book");
                         System.out.println("3: Display books");
-                        System.out.println("4: Delete student");
-                        System.out.println("5: Get student list");
-                        System.out.println("6. Search students");
+                        System.out.println("4: Delete user");
+                        System.out.println("5: Get users list");
+                        System.out.println("6. Search users");
                         System.out.println("7: Exit");
                         System.out.println();
                         System.out.print("Enter action: ");
@@ -165,7 +173,7 @@ public class Main {
                                 GetBooksFromDatabase.getAllBooks(Objects.requireNonNull(utils.GetConnector()));
                                 break;
                             case 4:
-                                System.out.print("The login (username) of the student you want to delete: ");
+                                System.out.print("The login (username) of the user you want to delete: ");
                                 String deletedUserNickname = scanner.next();
                                 User deletedUser = dbWork.getCurrUser(deletedUserNickname);
                                 if (deletedUser != null) {
@@ -173,17 +181,17 @@ public class Main {
                                         System.out.println("You can't delete yourself!");
                                     } else {
                                         dbWork.deleteUser(deletedUser);
-                                        System.out.println("Student " + deletedUser + " has been deleted.");
+                                        System.out.println("User " + deletedUser + " has been deleted.");
                                     }
                                 } else {
-                                    System.out.println("No such student in the database.");
+                                    System.out.println("No such User in the database.");
                                 }
                                 break;
                             case 5:
-                                StudentList.getAllStudent(utils.GetConnector());
+                                UserList.getAllStudent(utils.GetConnector());
                                 break;
                             case 6:
-                                SearchStudentByName.searchStudent(utils.GetConnector());
+                                SearchUserByName.searchStudent(utils.GetConnector());
                                 break;
                             case 7:
                                 System.out.println("Thanks for using the library!");

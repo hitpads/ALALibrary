@@ -12,16 +12,16 @@ public class AddBookToDatabase extends Book {
 
         @SuppressWarnings("resource")
         Scanner sc=new Scanner(System.in);
-        System.out.println("Enter Book Title:");
+        System.out.println("Enter Book Title: ");
         book.setBooktitle(sc.nextLine());
 
-        System.out.println("Author name:");
+        System.out.println("Author name: ");
         book.setBookAuthor(sc.nextLine());
 
-        System.out.println("Price:");
+        System.out.println("Price: ");
         book.setBookPrice(sc.nextInt());
 
-        System.out.println("Copies:");
+        System.out.println("Copies: ");
         int cnt=sc.nextInt();
         book.setBookCount(cnt);
 
@@ -35,11 +35,11 @@ public class AddBookToDatabase extends Book {
             int count=ps.executeUpdate();
             if(count>0)
             {
-                System.out.println("Book Added Successfully....");
+                System.out.println("Book Added Successfully!");
 
             }
             else
-                System.out.println("Unable to Process....!");
+                System.out.println("Unable to Process.");
 
 
         }

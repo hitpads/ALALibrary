@@ -1,4 +1,4 @@
-package student;
+package StudentMenu;
 
 public class ValidationName {
 
