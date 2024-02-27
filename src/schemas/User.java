@@ -32,28 +32,25 @@ public class User extends Person {
         return username;
     }
 
-
     public UserType getUserType() {
         return userType;
     }
 
     public int getId() {
-
         return id;
-
     }
 
     public User() {
     }
 
-    public User(int id, String name, String surname, int age, String username, String password) {
-        this.id = id;
+    public User(String name, String surname, int age, String username, String password, int id) {
         setName(name);
         setSurname(surname);
         setAge(age);
         setUsername(username);
         hashedPassword = utils.getHashedPassword(password);
         setHashedPassword(hashedPassword);
+        this.id = id;
     }
 
     @Override
@@ -66,4 +63,9 @@ public class User extends Person {
     }
 
 
+    public void setUserType(UserType userType) {
+    }
+
+    public void setId(int id) {
+    }
 }

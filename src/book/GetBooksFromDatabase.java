@@ -16,7 +16,7 @@ public class GetBooksFromDatabase extends Book {
             ResultSet rs=ps.executeQuery();
             while(rs.next())
             {
-                System.out.println("-------");
+//                System.out.println("-------");
                 System.out.println("Book id: "+rs.getInt(1));
                 System.out.println("Title: "+rs.getString(2));
                 System.out.println("Author: "+rs.getString(3));

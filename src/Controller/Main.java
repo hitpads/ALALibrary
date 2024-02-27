@@ -78,13 +78,13 @@ public class Main {
                     if (newUserPassword.equals(newUserRepeatedPassword)) {
                         int newUserId = DBWork.getNextUserId();
                         curUser = new User(
-                                newUserId,
                                 newUserName,
                                 newUserSurname,
                                 newUserAge,
                                 newUserUsername,
-                                newUserPassword
-                        );
+                                newUserPassword,
+                                newUserId
+                                );
                         System.out.println("You are registered and authorized!");
                         dbWork.InsertUser(curUser);
                         isAuth = true;

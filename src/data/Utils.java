@@ -44,14 +44,6 @@ public final class Utils {
         return null;
     }
 
-    public static Connection closeConnection(Connection conn) {
-        try {
-            conn.close();
-        } catch (Exception e) {
-            System.err.println("Error closing connection!");
-        }
-        return null;
-    }
 
     public Utils() {
     }

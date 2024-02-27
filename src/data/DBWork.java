@@ -27,6 +27,7 @@ public class DBWork {
         return 0;
     }
 
+
     public void InsertUser(User user) throws SQLException {
         try {
             Connection conn = utils.GetConnector();
@@ -40,14 +41,14 @@ public class DBWork {
             //...
         }
     }
-
+    User currUser = new User();
 
     public void issueBook(int bookId, int userId) {
         try (Connection connection = utils.GetConnector()) {
-            // user exist
-            String userQuery = "SELECT COUNT(*) FROM users WHERE id = " + userId;
-            Statement userStatement = connection.createStatement();
-            ResultSet userResultSet = userStatement.executeQuery(userQuery);
+            String userQuery = "SELECT COUNT(*) FROM users WHERE id = ?";
+            PreparedStatement userStatement = connection.prepareStatement(userQuery);
+            userStatement.setInt(1, userId);
+            ResultSet userResultSet = userStatement.executeQuery();
             userResultSet.next();
             int userCount = userResultSet.getInt(1);
             if (userCount == 0) {
@@ -55,15 +56,17 @@ public class DBWork {
                 return;
             }
 
-            // Issue the book
-            String query = "INSERT INTO book_issues (book_id, user_id, issue_date) VALUES (" + bookId + ", " + userId + ", CURRENT_DATE)";
-            Statement statement = connection.createStatement();
-            statement.executeUpdate(query);
+            String query = "INSERT INTO book_issues (book_id, user_id, issue_date) VALUES (?, ?, CURRENT_DATE)";
+            PreparedStatement statement = connection.prepareStatement(query);
+            statement.setInt(1, bookId);
+            statement.setInt(2, userId);
+            statement.executeUpdate();
             System.out.println("Book issued.");
         } catch (SQLException e) {
             System.out.println("Error issuing book: " + e.getMessage());
         }
     }
+
 
     public User getCurrUser(String username) {
         try {
@@ -76,18 +79,16 @@ public class DBWork {
             ResultSet table = statement.executeQuery(query);
             table.beforeFirst();
 
-            User currUser = new User();
-
-            while (table.next()) {
-                if (Objects.equals(table.getString(5), UserType.Admin.toString())) {
-                    currUser = new Admin();
-                }
-                currUser.setName(table.getString(1));
-                currUser.setSurname(table.getString(2));
-                currUser.setAge(Integer.parseInt(table.getString(3)));
-                currUser.setUsername(table.getString(4));
-                currUser.setHashedPassword(table.getString(6));
-                return currUser;
+            if (table.next()) {
+                User curUser = new User();
+                curUser.setId(table.getInt("id"));
+                curUser.setName(table.getString("name"));
+                curUser.setSurname(table.getString("surname"));
+                curUser.setAge(table.getInt("age"));
+                curUser.setUsername(table.getString("username"));
+                curUser.setHashedPassword(table.getString("hashed_password"));
+                curUser.setUserType(UserType.valueOf(table.getString("user_type")));
+                return curUser;
             }
         } catch (Exception e) {
             //...
