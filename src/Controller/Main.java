@@ -1,14 +1,14 @@
 package Controller;
 
-import book.AddBookToDatabase;
-import book.SearchBook;
+import BookOperations.AddBookToDatabase;
+import BookOperations.SearchBook;
 import data.DBWork;
 import data.Utils;
 import schemas.User;
 import schemas.UserType;
-import StudentMenu.SearchUserByName;
-import StudentMenu.UserList;
-import book.GetBooksFromDatabase;
+import UserMenu.SearchUserByName;
+import UserMenu.UserList;
+import BookOperations.GetBooksFromDatabase;
 
 import java.sql.SQLException;
 import java.util.Objects;
@@ -33,14 +33,16 @@ public class Main {
             System.out.println();
             System.out.print("Enter action: ");
 
-            int RegOfAuth = Integer.parseInt(scanner.nextLine());
-            switch (RegOfAuth) {
+            int choice = Integer.parseInt(scanner.nextLine());
+
+            switch (choice) {
                 case 1:
                     System.out.println("Enter your data: ");
                     System.out.print("Your login: ");
                     String username = scanner.nextLine();
                     curUser = dbWork.getCurrUser(username);
                     if (curUser != null) {
+
                         if (curUser.getUserType() == UserType.Admin) {
                             System.out.println("Welcome, administrator " + curUser + "!");
                         } else {
@@ -103,6 +105,7 @@ public class Main {
                     break;
             }
         }
+
         // MENUS
 
         while (true) {
@@ -207,6 +210,8 @@ public class Main {
                 System.out.println("You are not authorized. Goodbye!");
                 System.exit(0);
             }
+
+
         }
     }
 }

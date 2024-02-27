@@ -5,11 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a8ce0063-4a18-4c3f-875c-36ac800ee674" name="Changes" comment="Add issuing books">
+      <change afterPath="$PROJECT_DIR$/src/DisplayMenu/AdminMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DisplayMenu/UserMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/78be0dc3-c3a9-48bc-817a-baa961a0898a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/78be0dc3-c3a9-48bc-817a-baa961a0898a.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/78be0dc3-c3a9-48bc-817a-baa961a0898a/storage_v2/_src_/database/ALALibrary.Zc5D2A/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/78be0dc3-c3a9-48bc-817a-baa961a0898a/storage_v2/_src_/database/ALALibrary.Zc5D2A/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/book/GetBooksFromDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/book/GetBooksFromDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StudentMenu/SearchUserByName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserMenu/SearchUserByName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StudentMenu/UserList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserMenu/UserList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StudentMenu/ValidationName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserMenu/ValidationName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/book/AddBookToDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BookOperations/AddBookToDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/book/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BookOperations/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/book/GetBooksFromDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BookOperations/GetBooksFromDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/book/SearchBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BookOperations/SearchBook.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/DBWork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/DBWork.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/schemas/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/schemas/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/schemas/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/schemas/Student.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/schemas/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/schemas/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +62,7 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="2c6DNjpPxybeS7YdlRGcS9vUCV2" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -135,6 +146,7 @@
       <workItem from="1708983078670" duration="3683000" />
       <workItem from="1708986796234" duration="241000" />
       <workItem from="1708999708544" duration="6160000" />
+      <workItem from="1709061198084" duration="5779000" />
     </task>
     <task id="LOCAL-00001" summary="project compatibilty fix">
       <option name="closed" value="true" />

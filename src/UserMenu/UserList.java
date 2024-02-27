@@ -1,4 +1,4 @@
-package StudentMenu;
+package UserMenu;
 
 import schemas.User;
 

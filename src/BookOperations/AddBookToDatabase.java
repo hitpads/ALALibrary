@@ -1,4 +1,4 @@
-package book;
+package BookOperations;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

@@ -87,7 +87,12 @@ public class DBWork {
                 curUser.setAge(table.getInt("age"));
                 curUser.setUsername(table.getString("username"));
                 curUser.setHashedPassword(table.getString("hashed_password"));
-                curUser.setUserType(UserType.valueOf(table.getString("user_type")));
+                String userType = table.getString("user_type");
+                if(userType.equals("Admin")){
+                    curUser.setUserType(UserType.Admin);
+                }else{
+                    curUser.setUserType(UserType.User);
+                }
                 return curUser;
             }
         } catch (Exception e) {

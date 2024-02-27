@@ -8,7 +8,7 @@ public class User extends Person {
     private int id;
     private final Utils utils = new Utils();
     private String username;
-    private final UserType userType = UserType.User;
+    private UserType userType;
     private String hashedPassword;
 
     public User(String name, String surname, int age, String username, String password) {
@@ -64,6 +64,7 @@ public class User extends Person {
 
 
     public void setUserType(UserType userType) {
+        this.userType = userType;
     }
 
     public void setId(int id) {
